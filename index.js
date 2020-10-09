@@ -16,7 +16,9 @@ app.use(bodyParser.json());
 
 const port = 4000;
 
-
+app.get('/', (req, res) => {
+    res.send('hei hello working')
+})
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
